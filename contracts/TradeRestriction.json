@@ -1,0 +1,658 @@
+{
+  "contractName": "TradeRestriction",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "bytecode": "0x6080604052348015600f57600080fd5b50336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550603580605d6000396000f3006080604052600080fd00a165627a7a723058207695a886e7ee0357df51238c71c202a2140f77d2feb3fe2f8ecad04e8e5499f40029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a723058207695a886e7ee0357df51238c71c202a2140f77d2feb3fe2f8ecad04e8e5499f40029",
+  "sourceMap": "26:280:14:-;;;89:66;8:9:-1;5:2;;;30:1;27;20:12;5:2;89:66:14;138:10;120:15;;:28;;;;;;;;;;;;;;;;;;26:280;;;;;;",
+  "deployedSourceMap": "26:280:14:-;;;;;",
+  "source": "pragma solidity ^0.4.24;\n\ncontract TradeRestriction {\n\n    address _parentContract;\n\n    constructor() public {\n        _parentContract = msg.sender;\n    }\n\n    modifier onlyParentContract {\n        require(msg.sender == _parentContract, 'Only parent contract can add trading periods');\n        _;\n    }\n\n}",
+  "sourcePath": "/Users/mattb/Code/waterledger/core/contracts/trade-restrictions/TradeRestriction.sol",
+  "ast": {
+    "absolutePath": "/Users/mattb/Code/waterledger/core/contracts/trade-restrictions/TradeRestriction.sol",
+    "exportedSymbols": {
+      "TradeRestriction": [
+        4775
+      ]
+    },
+    "id": 4776,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4751,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:14"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 4775,
+        "linearizedBaseContracts": [
+          4775
+        ],
+        "name": "TradeRestriction",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 4753,
+            "name": "_parentContract",
+            "nodeType": "VariableDeclaration",
+            "scope": 4775,
+            "src": "59:23:14",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 4752,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "59:7:14",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 4761,
+              "nodeType": "Block",
+              "src": "110:45:14",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 4759,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 4756,
+                      "name": "_parentContract",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4753,
+                      "src": "120:15:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 4757,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6878,
+                        "src": "138:3:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 4758,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "138:10:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "120:28:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 4760,
+                  "nodeType": "ExpressionStatement",
+                  "src": "120:28:14"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 4762,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4754,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "100:2:14"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 4755,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "110:0:14"
+            },
+            "scope": 4775,
+            "src": "89:66:14",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 4773,
+              "nodeType": "Block",
+              "src": "189:114:14",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 4768,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 4765,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 6878,
+                            "src": "207:3:14",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 4766,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "207:10:14",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 4767,
+                          "name": "_parentContract",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 4753,
+                          "src": "221:15:14",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "207:29:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4f6e6c7920706172656e7420636f6e74726163742063616e206164642074726164696e6720706572696f6473",
+                        "id": 4769,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "238:46:14",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_114c77a7c2cbe5d5e823495cf692ce9fe555218e7443807f747c2722f90a82f7",
+                          "typeString": "literal_string \"Only parent contract can add trading periods\""
+                        },
+                        "value": "Only parent contract can add trading periods"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_114c77a7c2cbe5d5e823495cf692ce9fe555218e7443807f747c2722f90a82f7",
+                          "typeString": "literal_string \"Only parent contract can add trading periods\""
+                        }
+                      ],
+                      "id": 4764,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        6881,
+                        6882
+                      ],
+                      "referencedDeclaration": 6882,
+                      "src": "199:7:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 4770,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "199:86:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 4771,
+                  "nodeType": "ExpressionStatement",
+                  "src": "199:86:14"
+                },
+                {
+                  "id": 4772,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "295:1:14"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 4774,
+            "name": "onlyParentContract",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 4763,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "189:0:14"
+            },
+            "src": "161:142:14",
+            "visibility": "internal"
+          }
+        ],
+        "scope": 4776,
+        "src": "26:280:14"
+      }
+    ],
+    "src": "0:306:14"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/mattb/Code/waterledger/core/contracts/trade-restrictions/TradeRestriction.sol",
+    "exportedSymbols": {
+      "TradeRestriction": [
+        4775
+      ]
+    },
+    "id": 4776,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4751,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:14"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 4775,
+        "linearizedBaseContracts": [
+          4775
+        ],
+        "name": "TradeRestriction",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 4753,
+            "name": "_parentContract",
+            "nodeType": "VariableDeclaration",
+            "scope": 4775,
+            "src": "59:23:14",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 4752,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "59:7:14",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 4761,
+              "nodeType": "Block",
+              "src": "110:45:14",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 4759,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 4756,
+                      "name": "_parentContract",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4753,
+                      "src": "120:15:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 4757,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6878,
+                        "src": "138:3:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 4758,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "138:10:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "120:28:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 4760,
+                  "nodeType": "ExpressionStatement",
+                  "src": "120:28:14"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 4762,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4754,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "100:2:14"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 4755,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "110:0:14"
+            },
+            "scope": 4775,
+            "src": "89:66:14",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 4773,
+              "nodeType": "Block",
+              "src": "189:114:14",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 4768,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 4765,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 6878,
+                            "src": "207:3:14",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 4766,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "207:10:14",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 4767,
+                          "name": "_parentContract",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 4753,
+                          "src": "221:15:14",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "207:29:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4f6e6c7920706172656e7420636f6e74726163742063616e206164642074726164696e6720706572696f6473",
+                        "id": 4769,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "238:46:14",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_114c77a7c2cbe5d5e823495cf692ce9fe555218e7443807f747c2722f90a82f7",
+                          "typeString": "literal_string \"Only parent contract can add trading periods\""
+                        },
+                        "value": "Only parent contract can add trading periods"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_114c77a7c2cbe5d5e823495cf692ce9fe555218e7443807f747c2722f90a82f7",
+                          "typeString": "literal_string \"Only parent contract can add trading periods\""
+                        }
+                      ],
+                      "id": 4764,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        6881,
+                        6882
+                      ],
+                      "referencedDeclaration": 6882,
+                      "src": "199:7:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 4770,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "199:86:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 4771,
+                  "nodeType": "ExpressionStatement",
+                  "src": "199:86:14"
+                },
+                {
+                  "id": 4772,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "295:1:14"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 4774,
+            "name": "onlyParentContract",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 4763,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "189:0:14"
+            },
+            "src": "161:142:14",
+            "visibility": "internal"
+          }
+        ],
+        "scope": 4776,
+        "src": "26:280:14"
+      }
+    ],
+    "src": "0:306:14"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.25+commit.59dbf8f1.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.0-beta.1",
+  "updatedAt": "2018-11-22T14:03:15.122Z"
+}
