@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "civicledger@vs-ssh.visualstudio.com:v3/civicledger/Water%20Ledger/DevOps"
+    "url": "https://civicledger.visualstudio.com/Water%20Ledger/_git/DevOps"
   },
   "author": "",
   "license": "ISC"
