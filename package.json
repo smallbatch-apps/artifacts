@@ -1,0 +1,15 @@
+{
+  "name": "devops",
+  "version": "1.0.0",
+  "description": "Truffle Artifacts and other devops requirements",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "civicledger@vs-ssh.visualstudio.com:v3/civicledger/Water%20Ledger/DevOps"
+  },
+  "author": "",
+  "license": "ISC"
+}
