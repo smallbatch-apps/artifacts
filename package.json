@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://civicledger.visualstudio.com/Water%20Ledger/_git/DevOps"
+    "url": "git+ssh://git@github.com:smallbatch-apps/artifacts.git"
   },
   "author": "",
   "license": "ISC"
