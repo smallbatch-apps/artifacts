@@ -4,6 +4,7 @@
   "description": "Truffle Artifacts and other devops requirements",
   "main": "index.js",
   "scripts": {
+    "postinstall": "node postinstall-script.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
